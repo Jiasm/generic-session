@@ -98,7 +98,7 @@ module.exports = function(options = {}) {
 
     reset: function() {
       if (!this.headerSent || this.writeable)
-        this.cookies.set(key, null, { expires: new Date(0) })
+        this.cookies.set(key, null, { expires: new Date(0), httpOnly: cookie.httpOnly })
     }
   }
 
